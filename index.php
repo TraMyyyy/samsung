@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1><center>Đăng nhập</center></h1>
-    <form action="process-index.php" method = "POST" class ="container">
+    <form action="checkPassword.php" method = "POST" class ="container">
             <div class="mb-3">
                 <label class="form-label">Tên tài khoản</label>
                 <input type="text" class="form-control" name = "username">

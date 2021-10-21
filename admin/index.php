@@ -5,7 +5,7 @@
 
 <main>
      <!-- Thêm nhân viên -->
-     <a href="../addemployee.php" class = "btn btn-success m-2">Thêm nhân viên</a>
+     <a href="addemployee-form.php" class = "btn btn-success m-2">Thêm nhân viên</a>
 
      <!-- Kết thúc thêm nhân viên -->
 
