@@ -19,7 +19,7 @@
         $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
         $sql_2 = "INSERT INTO users(username, password) VALUES ('$email','$pass_hash')";
         $result_2 = mysqli_query($conn,$sql_2);
-        if($result_2 = true){
+        if($result_2 == true){
                 echo "Thêm nhân viên thành công";
                 echo "<a href='index.php'>Đăng nhập</a>";
         }else{

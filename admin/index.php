@@ -49,8 +49,8 @@
                 echo  '<td>'.$row['test2'].'</td>';
                 echo  '<td>'.$row['dep_id'].'</td>';
                 echo '<td>
-                <a href="#" class = "btn btn-warning">Xóa</a>
-                <a href="#" class = "btn btn-primary">Sửa</a>
+                <a href="delete-form.php?knox='.$row["knox_id"].'" class = "btn btn-warning" method = "GET">Xóa</a>
+                <a href="change-form.php?knox='.$row["knox_id"].'" class = "btn btn-primary" method = "GET">Sửa</a>
                 </td>';
                 echo   '</tr>';
                 }

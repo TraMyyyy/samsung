@@ -14,8 +14,11 @@
         die("không thể kết nối");
     }
 
-    $sql = "INSERT INTO employees(emp_id, emp_name, knox_id, email, place, hire_date, test1, test2, dep_id) 
-            VALUES ('$id','$name','$knox','$email','$address','$date','$t1','$t2','$office' )";
+    $sql = 'UPDATE employees
+    SET emp_id="'.$id.'",emp_name = "'.$name.'", knox_id= "'.$knox.'
+    ",email="'.$email.'",place="'.$address.'",hire_date='.$date.',test1="'.$t1.'",test2="'.$t2.'",dep_id = "'.$office.'" 
+    WHERE knox_id = "'.$knox.'"';
+
     $result = mysqli_query($conn, $sql);
     if($result == true){
         header ('Location: index.php');
