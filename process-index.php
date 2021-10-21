@@ -2,18 +2,20 @@
     session_start();
 
     if(isset($_POST['sbmGuiDi'])){
-        $username = $_POST['email'];
+        $username = $_POST['username'];
         $password = $_POST['password'];
     }
 
     // Kết nối sql
-    include 'config/constant.php';
-
+    $conn = mysqli_connect("localhost","root","12345","samsung");
+    if(!$conn){
+        die("Không thể kết nối");
+    }
     // Truy vấn CSDL
-    $sql = "SELECT * FROM  employees WHERE email =  $username AND emp_id = $password";
+    $sql = "SELECT * FROM  users WHERE username =  '$username' AND password = '$password'";
     $result = mysqli_query($conn,$sql);
 
-    if(sqli_num_rows($result)>0){
+    if(mysqli_num_rows($result)>0){
         $_SESSION['loginOK'] = $username;
         header('Location: admin/index.php');
 

@@ -8,24 +8,23 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Đăng kí</title>
   </head>
   <body>
-    <h1><center>Đăng nhập</center></h1>
-    <form action="process-index.php" method = "POST" class ="container">
+    <h1><center>Đăng kí</center></h1>
+
+    <form action="add-user.php" method = "POST" class = "container">
             <div class="mb-3">
-                <label class="form-label">Tên tài khoản</label>
-                <input type="text" class="form-control" name = "username">
+                <label class="form-label">Tên tài khoản:</label>
+                <input type="text" class="form-control" name = "email">
             </div>
-            <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" name = "password">
-            </div>
-        <button type="submit" class="btn btn-primary">Đăng nhập</button>
-        <div>
-            Bạn chưa có tài khoản?
-            <a href="sign-up.php">Đăng kí</a>
-    </div>
+        <div class = "mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name = "password">
+        </div>
+            <button name = "sbmUser" class = "btn btn-primary">Tạo tài khoản</button>
+    </form>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
